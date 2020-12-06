@@ -39,6 +39,7 @@ def f2(seat_codes: List[str], row_count: int, column_count: int) -> None:
     missing_positions = [[(row, column) for column in range(column_count) if seats[row][column] == 0] for row in range(row_count)]
     missing_positions = [row for row in missing_positions if len(row) == 1]
     missing_position = missing_positions[0][0]
+
     print('f2: missing_position =', missing_position, 'id =', missing_position[0] * 8 + missing_position[1])
 
 from input_loader import load_input
